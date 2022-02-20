@@ -8,8 +8,8 @@ const Axios = axios.create({
   responseType: "json",
   withCredentials: false, // si se permiten cookies
   // Las siguientes dos propiedades se utilizan para establecer el número de nuevas solicitudes automáticas y el tiempo de intervalo para el error o el tiempo de espera de la solicitud
-  reintentar: 2, // número de solicitudes
-  retryInterval: 1000, // Intervalo de reintento
+  reintentar: 10, // número de solicitudes
+  retryInterval: 10000, // Intervalo de reintento
 });
 
 export function changeStateLight(state) {
